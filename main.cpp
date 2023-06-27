@@ -40,21 +40,23 @@ int main()
 	const char* out_msg = "[OUT]:\n";
 
 	int size = 0;
+	bool isSize = false;
 
-	try
+	while (!isSize)
 	{
-		while (true)
+		try
 		{
 			std::cout << in_msg;
 			cin_to_int(size);
-
-			std::cout << out_msg << size << '\n';
+			isSize = true;
+		}
+		catch(const std::exception& e)
+		{
+			std::cerr << e.what() << '\n';
 		}
 	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << '\n';
-	}
+
+	std::cout << out_msg << size << '\n';
 
 	return 0;
 }
