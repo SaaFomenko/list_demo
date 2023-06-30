@@ -43,7 +43,7 @@ void cin_to_int(int& number)
 
 int main()
 {
-	const std::string size_err = "Размер списка долженбыть положительным целым числом "
+	const std::string size_err = "Размер списка должен быть положительным целым числом "
 		"не равным нулю, повторите ввод.\n";
 	const char* in_msg = "[IN]:\n";
 	const char* out_msg = "[OUT]:\n";
